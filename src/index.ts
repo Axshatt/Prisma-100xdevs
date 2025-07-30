@@ -32,6 +32,10 @@ async function FindUser() {
     const response = await client.user.findFirst({
         where: {
             id: 1,
+        },
+        include:{
+            todos:true
+
         }
 
     })
